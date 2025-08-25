@@ -5,3 +5,40 @@
 .cloudSlider.disabled {
   opacity: 30%;
 }
+
+/* Material-UI Slider Component Overrides */
+
+.cloudSlider .MuiSlider-track {
+  color: var(--side-panel-slider-track);
+}
+
+.cloudSlider .MuiSlider-rail {
+  color: var(--side-panel-slider-rail);
+}
+
+.cloudSlider .MuiSlider-thumb {
+  color: var(--side-panel-slider-thumb);
+}
+
+.cloudSlider .MuiSlider-thumb:hover,
+.cloudSlider .MuiSlider-thumb.Mui-focusVisible {
+  box-shadow: 0px 0px 0px 8px rgba(200, 200, 200, 0.15);
+}
+
+.cloudSlider .MuiSlider-thumb:active {
+  box-shadow: 0px 0px 0px 14px rgba(200, 200, 200, 0.15);
+}
+
+/* Material-UI Input Component Overrides */
+
+.cloudSlider .MuiInput-root {
+  width: 42px;
+  color: var(--side-panel-slider-input-color);
+}
+.cloudSlider .MuiInput-underline:before {
+  border-bottom-color: var(--side-panel-slider-input-underline);
+}
+
+.cloudSlider .MuiInput-underline:after {
+  border-bottom-color: var(--side-panel-slider-input-underline);
+}

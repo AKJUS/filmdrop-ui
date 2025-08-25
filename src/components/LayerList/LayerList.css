@@ -1,20 +1,22 @@
 .LayerList {
   position: absolute;
-  top: 130px;
-  left: 50px;
+  top: 131px;
+  left: 54px;
   z-index: 1;
-  background-color: rgba(34, 34, 34, 0.8);
-  border-radius: 2px;
+  background-color: var(--map-info-overlay-background);
+  background-clip: padding-box;
+  border-radius: 4px;
   min-width: 200px;
   max-width: 400px;
   max-height: 300px;
   font-size: 16px;
   display: flex;
   flex-direction: column;
+  color: var(--map-info-overlay-color);
 }
 
 .LayerListTitle {
-  border-bottom: solid 2px #373d4d;
+  border-bottom: solid 2px var(--map-info-overlay-heading-border);
   height: 35px;
   margin-bottom: 8px;
   display: flex;
@@ -64,15 +66,15 @@
   left: 0;
   height: 16px;
   width: 16px;
-  background-color: #eee;
+  background-color: var(--map-info-overlay-checkbox-background);
 }
 
 .LayerListLayerContainer:hover input ~ .LayerListCheckmark {
-  background-color: #ccc;
+  background-color: var(--brand-accent-primary);
 }
 
 .LayerListLayerContainer input:checked ~ .LayerListCheckmark {
-  background-color: #81c05b;
+  background-color: var(--brand-accent-primary);
 }
 
 .LayerListCheckmark:after {

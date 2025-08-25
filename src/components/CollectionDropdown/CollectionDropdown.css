@@ -1,19 +1,23 @@
 .collectionDropdown .MuiInput-underline:before {
-  border-color: #76829c;
+  border-color: var(--side-panel-dropdown-underline);
+}
+
+.collectionDropdown .MuiInput-underline:after {
+  border-color: var(--side-panel-dropdown-underline);
 }
 
 .collectionDropdown svg {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--side-panel-dropdown-arrow-color);
 }
 
 #collectionDropdown {
-  border-color: white;
-  color: white;
-  background-color: #12171a;
+  border-color: var(--side-panel-dropdown-border);
+  color: var(--side-panel-dropdown-color);
+  background-color: var(--side-panel-dropdown-background);
 }
 
 #collectionDropdown option {
-  background-color: #12171a !important;
+  background-color: var(--side-panel-dropdown-background) !important;
 }
 
 .collectionDropdown.error-true select {

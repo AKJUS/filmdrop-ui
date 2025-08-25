@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
 import './index.css'
+import './themes/theme.css'
 import Content from './components/Layout/Content/Content'
 import PageHeader from './components/Layout/PageHeader/PageHeader'
 import UploadGeojsonModal from './components/UploadGeojsonModal/UploadGeojsonModal'
@@ -11,7 +12,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import CartModal from './components/Cart/CartModal/CartModal'
 import { InitializeAppFromConfig } from './utils/configHelper'
 import Login from './components/Login/Login'
-import { setauthTokenExists } from './redux/slices/mainSlice'
+import { setauthTokenExists, setCurrentTheme } from './redux/slices/mainSlice'
+import { initializeTheme, applyTheme } from './utils/themeHelper'
 
 function App() {
   const dispatch = useDispatch()
@@ -51,6 +53,18 @@ function App() {
       GetCollectionsService()
     }
   }, [_appConfig, _authTokenExists])
+
+  useEffect(() => {
+    if (_appConfig) {
+      const { currentTheme, switchingEnabled } = initializeTheme(_appConfig)
+
+      if (switchingEnabled) {
+        dispatch(setCurrentTheme(currentTheme))
+      }
+
+      applyTheme(currentTheme)
+    }
+  }, [_appConfig])
 
   return (
     <React.StrictMode>

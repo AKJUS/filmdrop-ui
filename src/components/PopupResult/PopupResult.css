@@ -35,7 +35,7 @@
 
 .popupResultDetailsRowKey {
   font-weight: bold;
-  color: #fff;
+  color: var(--side-panel-heading-color);
 }
 
 .popupResultDetailsRowValue {
@@ -44,7 +44,7 @@
 }
 
 .popupResultDetailsHrefLink {
-  color: #d3d3d3;
+  color: var(--side-panel-link-color);
   text-decoration: underline;
   width: 100%;
   font-size: 14px;
@@ -52,7 +52,7 @@
 }
 
 .popupResultDetailsHrefLink:hover {
-  color: #fff;
+  color: var(--side-panel-link-color-hover);
 }
 
 /* width */

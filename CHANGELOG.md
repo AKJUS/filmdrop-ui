@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+### Added
+
+- Added config option `MAP_ZOOM_MAX` to limit map zooming. ([413](https://github.com/Element84/filmdrop-ui/pull/413))
+- Added config option `TILE_LAYER_PARAMS` to allow per-collection layer tiling parameters for leaflet. ([413](https://github.com/Element84/filmdrop-ui/pull/413))
+- Added dark/Light theme switching ability. ([434](https://github.com/Element84/filmdrop-ui/pull/434))
+
 ### Fixed
 
 - Cloud slider not expanding to fill available space. ([416](https://github.com/Element84/filmdrop-ui/pull/416))
@@ -18,14 +24,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Resolve package vulnerabilities. ([415](https://github.com/Element84/filmdrop-ui/pull/415))
 - Remove the `upgrade npm` step in the CI `test` job to avoid compatibility problems between the version of Node specified by the `.nvmrc` file and
   the latest `npm` version. ([415](https://github.com/Element84/filmdrop-ui/pull/415))
+- ⚠️ **BREAKING CHANGE:** Replaced the configuration options `BASEMAP_URL`,
+  `BASEMAP_DARK_THEME`, and `BASEMAP_HTML_ATTRIBUTION` with a single `BASEMAP` object
+  for clean basemap configuration that supports optional dark/light mode theme
+  switching. See the [README](./README.md) for the new `BASEMAP` object structure.
+  ([434](https://github.com/Element84/filmdrop-ui/pull/434))
+- ⚠️ **BREAKING CHANGE:** Replaced the boolean configuration option `SHOW_BRAND_LOGO` with
+  a `BRAND_LOGO` object for clean configuration that supports optional dark/light mode
+  theme switching and removes the hard-coded link href and title. See the
+  [README](./README.md) for the new `BRAND_LOGO` object structure.
+  ([434](https://github.com/Element84/filmdrop-ui/pull/434))
 
 ## 5.7.1 - 2024-09-24
 
 ### Added
 
 - Client-side validation to login form fields
-- Added config option `MAP_ZOOM_MAX` to limit map zooming.
-- Added config option `TILE_LAYER_PARAMS` to allow per-collection layer tiling parameters for leaflet.
 
 ### Fixed
 

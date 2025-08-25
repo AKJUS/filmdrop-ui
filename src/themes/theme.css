@@ -1,0 +1,301 @@
+/* ------------------- DARK THEME ------------------- */
+:root[data-theme='filmdrop-dark'] {
+  /* Dark Color Palette */
+  --brand-accent-primary: #6cc24a;
+  --brand-accent-primary-dark: #35731c;
+  --transparent: transparent;
+  --white: #ffffff;
+
+  --gray-1: #dedede;
+  --gray-2: #d3d3d3;
+  --gray-3: #9b9b9b;
+  --gray-4: #676767;
+
+  --blue-gray-1: #a9b0c1;
+  --blue-gray-2: #76829c;
+  --blue-gray-3: #4f5768;
+  --blue-gray-4: #353d4f;
+  --blue-gray-5: #12171a;
+
+  --black-alpha-70: rgba(0, 0, 0, 0.7);
+  --black-alpha-80: rgba(0, 0, 0, 0.8);
+  --gray-alpha-80: rgba(34, 34, 34, 0.8);
+
+  /* App */
+  --app-background-disabled: var(--black-alpha-70);
+  --app-background-loading: var(--blue-gray-4);
+  --app-color-loading: var(--gray-2);
+
+  /* Login */
+  --login-page-background: var(--blue-gray-5);
+  --login-container-background: var(--blue-gray-4);
+  --login-color: var(--white);
+
+  /* Header */
+  --page-header-background: var(--blue-gray-5);
+  --page-header-button-background: var(--transparent);
+  --page-header-button-background-hover: var(--brand-accent-primary);
+  --page-header-button-color: var(--blue-gray-1);
+  --page-header-button-color-hover: var(--blue-gray-5);
+  --page-header-button-border: var(--blue-gray-2);
+  --page-header-button-border-hover: var(--brand-accent-primary);
+
+  --cart-button-color: var(--blue-gray-5);
+  --cart-button-background: var(--brand-accent-primary);
+  --cart-button-border: var(--brand-accent-primary);
+  --cart-button-color-disabled: var(--blue-gray-1);
+  --cart-button-background-disabled: var(--transparent);
+  --cart-button-border-disabled: var(--blue-gray-2);
+
+  --cart-button-count-color: var(--white);
+  --cart-button-count-background: var(--brand-accent-primary-dark);
+  --cart-button-count-color-disabled: var(--white);
+  --cart-button-count-background-disabled: var(--blue-gray-1);
+
+  /* Content */
+  --page-content-color: var(--gray-2);
+
+  /* Side Panel */
+  --side-panel-background: var(--blue-gray-5);
+  --side-panel-background-disabled: var(--blue-gray-5);
+  --side-panel-heading-color: var(--white);
+  --side-panel-horizontal-divider-color: var(--blue-gray-4);
+  --side-panel-link-color: var(--gray-2);
+  --side-panel-link-color-hover: var(--white);
+
+  --side-panel-tab-background: var(--blue-gray-4);
+  --side-panel-tab-color: var(--white);
+  --side-panel-tab-border: var(--blue-gray-4);
+  --side-panel-tab-bottom-selected: var(--brand-accent-primary);
+
+  --side-panel-dropdown-underline: var(--blue-gray-2);
+  --side-panel-dropdown-arrow-color: var(--blue-gray-2);
+  --side-panel-dropdown-border: var(--white);
+  --side-panel-dropdown-color: var(--white);
+  --side-panel-dropdown-background: var(--blue-gray-5);
+
+  --side-panel-datepicker-icon-color: var(--blue-gray-4);
+
+  --side-panel-slider-input-color: var(--white);
+  --side-panel-slider-input-underline: var(--blue-gray-2);
+  --side-panel-slider-track: var(--blue-gray-2);
+  --side-panel-slider-rail: var(--blue-gray-2);
+  --side-panel-slider-thumb: var(--blue-gray-2);
+
+  --side-panel-button-color: var(--white);
+  --side-panel-button-background: var(--blue-gray-3);
+  --side-panel-button-background-hover: var(--blue-gray-4);
+  --side-panel-button-secondary-color: var(--blue-gray-5);
+  --side-panel-button-secondary-background: var(--gray-1);
+  --side-panel-button-secondary-background-hover: var(--gray-3);
+  --side-panel-button-border: var(--blue-gray-1);
+
+  --side-panel-switch-thumb: var(--white);
+  --side-panel-switch-track-background: var(--gray-1);
+  --side-panel-switch-track-background-checked: var(--brand-accent-primary);
+
+  /* Map Overlays*/
+  --map-info-overlay-background: var(--gray-alpha-80);
+  --map-info-overlay-color: var(--white);
+  --map-info-overlay-button-background: var(--transparent);
+  --map-info-overlay-button-color: var(--blue-gray-1);
+  --map-info-overlay-button-border: var(--blue-gray-1);
+  --map-info-overlay-button-background-hover: var(--transparent);
+  --map-info-overlay-button-color-hover: var(--white);
+  --map-info-overlay-heading-color: var(--blue-gray-1);
+  --map-info-overlay-heading-border: var(--blue-gray-3);
+  --map-info-overlay-checkbox-background: var(--blue-gray-3);
+
+  --map-alert-overlay-primary-background: var(--blue-gray-4);
+  --map-alert-overlay-primary-color: var(--gray-1);
+  --map-alert-overlay-secondary-background: var(--blue-gray-3);
+  --map-alert-overlay-secondary-color: var(--white);
+  --map-alert-overlay-accent-color: var(--brand-accent-primary);
+
+  --map-attribution-overlay-color: var(--gray-1);
+  --map-attribution-overlay-tooltip-color: var(--blue-gray-1);
+
+  /* Aggregation */
+  --hex-heatmap-legend: var(--gray-1);
+  --hex-label-color: var(--white);
+  --hex-label-shadow: var(--black-alpha-80);
+  --grid-cell-tooltip: var(--brand-accent-primary);
+
+  /* Action Button */
+  --action-button-background: var(--brand-accent-primary);
+  --action-button-background-hover: var(--brand-accent-primary-dark);
+  --action-button-color: var(--blue-gray-5);
+  --action-button-color-hover: var(--gray-1);
+  --action-button-color-disabled: var(--gray-4);
+  --action-button-background-disabled: var(--gray-2);
+}
+
+/* Make map tiles dark for dark theme */
+:root[data-theme='filmdrop-dark'] .map-tiles {
+  filter: brightness(1.125) invert(1) contrast(0.9) hue-rotate(0deg) saturate(0);
+}
+
+/* ------------------- LIGHT THEME ------------------- */
+:root[data-theme='filmdrop-light'] {
+  /* Light Color Palette */
+  --brand-accent-primary: #6cc24a;
+  --brand-accent-primary-dark: #35731c;
+  --transparent: transparent;
+  --white: #ffffff;
+  --black: #000000;
+
+  --blue-gray-1: #f8f9fa;
+  --blue-gray-2: #e9ecef;
+  --blue-gray-3: #dee2e6;
+  --blue-gray-4: #ced4da;
+  --blue-gray-5: #adb5bd;
+  --blue-gray-6: #6c757d;
+  --blue-gray-7: #495057;
+  --blue-gray-8: #212529;
+
+  --blue-gray-alpha-60: rgba(108, 117, 125, 0.6);
+  --white-alpha-95: rgba(255, 255, 255, 0.95);
+
+  /* App */
+  --app-background-disabled: var(--blue-gray-alpha-60);
+  --app-background-loading: var(--blue-gray-2);
+  --app-color-loading: var(--blue-gray-7);
+
+  /* Login */
+  --login-page-background: var(--blue-gray-1);
+  --login-container-background: var(--white);
+  --login-color: var(--blue-gray-8);
+
+  /* Header */
+  --page-header-background: var(--white);
+  --page-header-button-background: var(--transparent);
+  --page-header-button-background-hover: var(--brand-accent-primary);
+  --page-header-button-color: var(--blue-gray-7);
+  --page-header-button-color-hover: var(--white);
+  --page-header-button-border: var(--blue-gray-4);
+  --page-header-button-border-hover: var(--brand-accent-primary);
+
+  --cart-button-color: var(--white);
+  --cart-button-background: var(--brand-accent-primary);
+  --cart-button-border: var(--brand-accent-primary);
+  --cart-button-color-disabled: var(--blue-gray-7);
+  --cart-button-background-disabled: var(--transparent);
+  --cart-button-border-disabled: var(--blue-gray-4);
+
+  --cart-button-count-color: var(--white);
+  --cart-button-count-background: var(--brand-accent-primary-dark);
+  --cart-button-count-color-disabled: var(--white);
+  --cart-button-count-background-disabled: var(--blue-gray-7);
+
+  /* Content */
+  --page-content-color: var(--blue-gray-7);
+
+  /* Side Panel */
+  --side-panel-background: var(--blue-gray-1);
+  --side-panel-background-disabled: var(--blue-gray-1);
+  --side-panel-heading-color: var(--blue-gray-8);
+  --side-panel-horizontal-divider-color: var(--blue-gray-4);
+  --side-panel-link-color: var(--blue-gray-7);
+  --side-panel-link-color-hover: var(--blue-gray-8);
+
+  --side-panel-tab-background: var(--blue-gray-2);
+  --side-panel-tab-color: var(--blue-gray-8);
+  --side-panel-tab-border: var(--blue-gray-2);
+  --side-panel-tab-bottom-selected: var(--brand-accent-primary);
+
+  --side-panel-dropdown-underline: var(--blue-gray-4);
+  --side-panel-dropdown-arrow-color: var(--blue-gray-6);
+  --side-panel-dropdown-border: var(--blue-gray-4);
+  --side-panel-dropdown-color: var(--blue-gray-8);
+  --side-panel-dropdown-background: var(--white);
+
+  --side-panel-datepicker-icon-color: var(--blue-gray-6);
+
+  --side-panel-slider-input-color: var(--blue-gray-8);
+  --side-panel-slider-input-underline: var(--blue-gray-4);
+  --side-panel-slider-track: var(--brand-accent-primary);
+  --side-panel-slider-rail: var(--blue-gray-4);
+  --side-panel-slider-thumb: var(--white);
+  --side-panel-slider-thumb: var(--brand-accent-primary);
+
+  --side-panel-button-color: var(--blue-gray-8);
+  --side-panel-button-background: var(--white);
+  --side-panel-button-background-hover: var(--blue-gray-2);
+  --side-panel-button-secondary-color: var(--white);
+  --side-panel-button-secondary-background: var(--brand-accent-primary);
+  --side-panel-button-secondary-background-hover: var(
+    --brand-accent-primary-dark
+  );
+  --side-panel-button-border: var(--blue-gray-4);
+
+  --side-panel-switch-thumb: var(--white);
+  --side-panel-switch-track-background: var(--blue-gray-4);
+  --side-panel-switch-track-background-checked: var(--brand-accent-primary);
+
+  /* Map Overlays*/
+  --map-info-overlay-background: var(--white);
+  --map-info-overlay-color: var(--blue-gray-8);
+  --map-info-overlay-button-background: var(--transparent);
+  --map-info-overlay-button-color: var(--blue-gray-7);
+  --map-info-overlay-button-border: var(--blue-gray-4);
+  --map-info-overlay-button-background-hover: var(--blue-gray-2);
+  --map-info-overlay-button-color-hover: var(--blue-gray-8);
+  --map-info-overlay-heading-color: var(--blue-gray-7);
+  --map-info-overlay-heading-border: var(--blue-gray-3);
+  --map-info-overlay-checkbox-background: var(--blue-gray-3);
+
+  --map-alert-overlay-primary-background: var(--white);
+  --map-alert-overlay-primary-color: var(--blue-gray-8);
+  --map-alert-overlay-secondary-background: var(--blue-gray-2);
+  --map-alert-overlay-secondary-color: var(--blue-gray-8);
+  --map-alert-overlay-accent-color: var(--brand-accent-primary);
+
+  --map-attribution-overlay-color: var(--blue-gray-6);
+  --map-attribution-overlay-tooltip-color: var(--blue-gray-7);
+
+  /* Aggregation */
+  --hex-heatmap-legend: var(--blue-gray-8);
+  --hex-label-color: var(--black);
+  --hex-label-shadow: var(--white-alpha-95);
+  --grid-cell-tooltip: var(--brand-accent-primary);
+
+  /* Action Button */
+  --action-button-background: var(--brand-accent-primary);
+  --action-button-background-hover: var(--brand-accent-primary-dark);
+  --action-button-color: var(--white);
+  --action-button-color-hover: var(--white);
+  --action-button-color-disabled: var(--blue-gray-5);
+  --action-button-background-disabled: var(--blue-gray-4);
+}
+
+/* Invert logo colors for light theme */
+:root[data-theme='filmdrop-light'] .headerLogoImage {
+  filter: invert(1);
+}
+
+/* No map tile styling for light theme */
+:root[data-theme='filmdrop-light'] .map-tiles {
+  filter: none;
+}
+
+/* Add green ripple effects to MUI component thumbs for light theme */
+:root[data-theme='filmdrop-light'] .cloudSlider .MuiSlider-thumb:hover,
+:root[data-theme='filmdrop-light']
+  .cloudSlider
+  .MuiSlider-thumb.Mui-focusVisible {
+  box-shadow: 0px 0px 0px 8px rgba(108, 194, 74, 0.15);
+}
+
+:root[data-theme='filmdrop-light'] .cloudSlider .MuiSlider-thumb:active {
+  box-shadow: 0px 0px 0px 14px rgba(108, 194, 74, 0.15);
+}
+
+:root[data-theme='filmdrop-light'] .Search .MuiSwitch-switchBase:hover {
+  background-color: rgba(108, 194, 74, 0.15);
+}
+
+:root[data-theme='filmdrop-light']
+  .Search
+  .MuiSwitch-switchBase.Mui-checked:hover {
+  background-color: rgba(108, 194, 74, 0.15);
+}

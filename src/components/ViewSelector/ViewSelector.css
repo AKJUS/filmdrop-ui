@@ -1,23 +1,48 @@
 .viewSelector button:nth-child(1) {
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .viewSelector button:nth-child(2) {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   position: relative;
   left: -1px;
 }
 
 .viewSelector button {
-  border: 1px solid #76829c !important;
+  border: 1px solid var(--side-panel-button-border) !important;
   font-size: 12px;
   line-height: 15px;
   margin-top: 7px;
   letter-spacing: 0.05em;
+  height: 32px;
 }
 
 .viewSelector div[role='group'] {
+  box-shadow: none;
+}
+
+/* Material-UI Button Component Overrides */
+
+.viewSelector .MuiButton-containedPrimary {
+  background-color: var(--side-panel-button-secondary-background);
+  color: var(--side-panel-button-secondary-color);
+  box-shadow: none;
+}
+
+.viewSelector .MuiButton-containedPrimary:hover {
+  background-color: var(--side-panel-button-secondary-background-hover);
+  box-shadow: none;
+}
+
+.viewSelector .MuiButton-containedSecondary {
+  background-color: var(--side-panel-button-background);
+  color: var(--side-panel-button-color);
+  box-shadow: none;
+}
+
+.viewSelector .MuiButton-containedSecondary:hover {
+  background-color: var(--side-panel-button-background-hover);
   box-shadow: none;
 }

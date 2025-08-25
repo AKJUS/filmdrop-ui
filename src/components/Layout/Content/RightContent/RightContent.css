@@ -1,7 +1,6 @@
 .RightContent {
   width: calc(100% - 300px);
   height: 100%;
-  background-color: #12171a;
   display: flex;
   position: absolute;
   left: 300px;
@@ -12,7 +11,7 @@
   bottom: 10px;
   left: 12px;
   z-index: 6;
-  background: #353d4f;
+  background: var(--map-alert-overlay-primary-background);
   padding: 6px 15px;
   border-radius: 2px;
   font-size: 0.75em;
@@ -24,7 +23,7 @@
 
 .zoomInText {
   all: unset;
-  color: #6cc24a;
+  color: var(--map-alert-overlay-accent-color);
   cursor: pointer;
   transition: border-color 0.33s ease-in-out;
   border-bottom: 1px solid transparent;
@@ -33,7 +32,7 @@
 }
 
 .zoomInText:hover {
-  border-color: #6cc24a;
+  border-color: var(--map-alert-overlay-accent-color);
 }
 
 @keyframes fadeIn {
@@ -55,8 +54,8 @@
 }
 
 .actionButton {
-  background-color: #6cc24a;
-  color: #12171a;
+  background-color: var(--action-button-background);
+  color: var(--action-button-color);
   border: 0px;
   border-radius: 6px;
   font-size: 18px;
@@ -76,24 +75,19 @@
 }
 
 .actionButton:hover {
-  background-color: #35731c;
-  color: #dedede;
-}
-
-.actionButton a {
-  color: #12171a;
-  text-decoration: none;
+  background-color: var(--action-button-background-hover);
+  color: var(--action-button-color-hover);
 }
 
 .actionButtonDisabled {
-  background-color: #d3d3d3;
-  color: #676767;
+  background-color: var(--action-button-background-disabled);
+  color: var(--action-button-color-disabled);
   cursor: default;
 }
 
 .actionButtonDisabled:hover {
-  background-color: #d3d3d3;
-  color: #676767;
+  background-color: var(--action-button-background-disabled);
+  color: var(--action-button-color-disabled);
   cursor: default;
 }
 
@@ -108,15 +102,15 @@
   top: 11px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(34, 34, 34, 0.8);
+  background-color: var(--map-info-overlay-background);
   padding: 8px 10px;
   border-radius: 5px;
-  color: #fff;
+  color: var(--map-info-overlay-color);
   align-items: center;
   font-size: 0.75em;
   letter-spacing: 0.025em;
   line-height: 1.5;
-  left: 52px;
+  left: 54px;
   transform: none;
 }
 
@@ -125,6 +119,10 @@
   flex-direction: column;
   align-items: center;
   font-weight: bold;
+}
+
+.resultCount strong {
+  color: var(--map-info-overlay-heading-color);
 }
 
 .resultCountCartText {
@@ -140,9 +138,9 @@
 }
 
 .countButton {
-  background-color: transparent;
-  color: #a9b0c1;
-  border: 1px solid #a9b0c1;
+  background-color: var(--map-info-overlay-button-background);
+  color: var(--map-info-overlay-button-color);
+  border: 1px solid var(--map-info-overlay-button-border);
   border-radius: 5px;
   height: 28px;
   font-size: 14px;
@@ -161,18 +159,17 @@
   margin-right: 2.5px;
 }
 .countButton:hover {
-  background-color: #252f36;
-  color: #fff;
+  background-color: var(--map-info-overlay-button-background-hover);
+  color: var(--map-info-overlay-button-color-hover);
 }
 
 .disabledCountButton {
-  color: #7f828a;
-  border: 1px solid #7f828a;
   cursor: default;
+  opacity: 0.35;
 }
 .disabledCountButton:hover {
-  color: #7f828a;
-  background-color: transparent;
+  color: var(--map-info-overlay-button-color);
+  background-color: var(--map-info-overlay-button-background);
 }
 
 .countButtonCancelText {
@@ -187,10 +184,10 @@
   transform: translateX(-50%);
   display: flex;
   flex-direction: row;
-  background-color: rgba(34, 34, 34, 0.8);
+  background-color: var(--map-info-overlay-background);
   padding: 10px 20px;
   border-radius: 5px;
-  color: #fff;
+  color: var(--map-info-overlay-color);
   align-items: center;
   justify-content: center;
   font-size: 0.75em;
@@ -204,19 +201,19 @@
   font-size: 16px;
 }
 .drawGeomMessageTextTitle {
-  color: #abb0c0;
+  color: var(--map-info-overlay-heading-color);
   font-weight: bold;
 }
 
 .drawGeomMessageCancelButton {
   height: 32px;
   width: 75px;
-  background-color: transparent;
+  background-color: var(--map-info-overlay-button-background);
   border: none;
-  color: white;
+  color: var(--map-info-overlay-button-color);
   font-size: 16px;
   cursor: pointer;
-  border: 1px solid #a9b0c1;
+  border: 1px solid var(--map-info-overlay-button-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,8 +221,9 @@
   margin-left: 30px;
 }
 
-.resultCount strong {
-  color: #a9b0c1;
+.drawGeomMessageCancelButton:hover {
+  background-color: var(--map-info-overlay-button-background-hover);
+  color: var(--map-info-overlay-button-color-hover);
 }
 
 .loadingSpinnerContainer {
@@ -246,7 +244,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(53, 61, 79);
+  background: var(--app-background-loading);
+  color: var(--app-color-loading);
   z-index: 499;
   opacity: 0.75;
 }
@@ -256,7 +255,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: #12171a;
+  background-color: var(--map-info-overlay-background);
   padding: 4px 6px;
 }
 
@@ -266,7 +265,7 @@
 }
 
 .mapAttribution span {
-  color: #bbb;
+  color: var(--map-attribution-overlay-color);
 }
 
 .mapAttribution a:hover {
@@ -278,27 +277,28 @@ div[data-tooltip-id='attribution-tooltip'] {
   bottom: 0;
   right: 10px;
   z-index: 1;
-  color: #a9b0c1;
+  color: var(--map-attribution-overlay-tooltip-color);
 }
 
 div#attribution-tooltip {
   z-index: 999;
   white-space: nowrap;
   padding: 2px;
-  background-color: #12171a;
+  background-color: var(--map-info-overlay-background);
 }
 
 .layerListButton {
   position: absolute;
   background-color: #fff;
+  background-clip: padding-box;
   top: 130px;
-  left: 12px;
+  left: 10px;
   z-index: 1;
-  height: 29px;
-  width: 29px;
+  height: 30px;
+  width: 30px;
   cursor: pointer;
   border-radius: 4px;
-  border: solid 1px #ccc;
+  border: solid 2px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -317,15 +317,14 @@ div#attribution-tooltip {
   right: 10px;
   bottom: 32px;
   z-index: 10;
-  background-color: #555;
   font-size: 16px;
   padding: 10px;
   display: flex;
   flex-direction: row;
-  background-color: rgba(34, 34, 34, 0.8);
+  background-color: var(--map-info-overlay-background);
   padding: 8px 10px;
   border-radius: 5px;
-  color: #fff;
+  color: var(--map-info-overlay-color);
   align-items: center;
   justify-content: center;
 }

@@ -45,7 +45,8 @@ const initialState = {
   selectedPopupResultIndex: 0,
   autoCenterOnItemChanged: false,
   hasLeftPanelTabChanged: false,
-  authTokenExists: false
+  authTokenExists: false,
+  currentTheme: null
 }
 
 // next, for every key in the initialState
@@ -179,6 +180,9 @@ export const mainSlice = createSlice({
     },
     setauthTokenExists: (state, action) => {
       state.authTokenExists = action.payload
+    },
+    setCurrentTheme: (state, action) => {
+      state.currentTheme = action.payload
     }
   }
 })
@@ -227,5 +231,6 @@ export const { setselectedPopupResultIndex } = mainSlice.actions
 export const { setautoCenterOnItemChanged } = mainSlice.actions
 export const { sethasLeftPanelTabChanged } = mainSlice.actions
 export const { setauthTokenExists } = mainSlice.actions
+export const { setCurrentTheme } = mainSlice.actions
 
 export default mainSlice.reducer

@@ -23,11 +23,13 @@ import {
   DEFAULT_MAP_ZOOM,
   DEFAULT_MAP_ZOOM_MAX
 } from '../defaults'
+import { getBasemapConfig } from '../../utils/themeHelper'
 
 const LeafMap = () => {
   const dispatch = useDispatch()
   const _appConfig = useSelector((state) => state.mainSlice.appConfig)
   const _cartItems = useSelector((state) => state.mainSlice.cartItems)
+  const _currentTheme = useSelector((state) => state.mainSlice.currentTheme)
   // set map ref to itself with useRef
   const mapRef = useRef()
 
@@ -193,11 +195,9 @@ const LeafMap = () => {
       >
         {/* set basemap layers here: */}
         <TileLayer
-          className={_appConfig.BASEMAP_DARK_THEME === false ? '' : 'map-tiles'}
-          url={
-            _appConfig.BASEMAP_URL ||
-            'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
-          }
+          key={_currentTheme} // Force re-mount when theme changes
+          className="map-tiles"
+          url={getBasemapConfig(_appConfig, _currentTheme)?.url}
           maxNativeZoom={18}
           minNativeZoom={2}
           maxZoom={

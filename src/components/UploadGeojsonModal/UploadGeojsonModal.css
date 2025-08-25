@@ -5,7 +5,7 @@
   right: 0;
   bottom: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--app-background-disabled);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,8 +15,8 @@
   width: 600px;
   max-width: 80%;
   min-height: 280px;
-  background: #353d4f;
-  color: #dedede;
+  background: var(--map-alert-overlay-primary-background);
+  color: var(--map-alert-overlay-primary-color);
   padding: 20px;
   position: relative;
   display: flex;
@@ -57,15 +57,15 @@
 .uploadGeojsonModalActionButton {
   height: 32px;
   width: 50px;
-  background-color: #4f5768;
+  background-color: var(--side-panel-button-background);
   border: none;
-  color: white;
+  color: var(--side-panel-button-color);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  border: 1px solid #a9b0c1;
+  border: 1px solid var(--side-panel-button-border);
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -75,11 +75,40 @@
 }
 
 .uploadGeojsonModalActionButton:hover {
-  background: #353d4f;
+  background: var(--side-panel-button-background-hover);
 }
 
 @media (max-width: 650px) {
   .fileToUploadText {
     font-size: 14px;
   }
+}
+
+.uploadGeojsonDropZone {
+  padding: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-style: dashed;
+  border-color: var(--map-alert-overlay-accent-color);
+  background-color: var(--map-alert-overlay-secondary-background);
+  color: var(--map-alert-overlay-secondary-color);
+  outline: none;
+  transition: border 0.24s ease-in-out;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.uploadGeojsonDropZoneFocused {
+  border-color: var(--map-alert-overlay-accent-color);
+}
+
+.uploadGeojsonDropZoneAccept {
+  border-color: var(--map-alert-overlay-accent-color);
+}
+
+/* Keep this after Accept so Reject wins if both apply */
+.uploadGeojsonDropZoneReject {
+  border-color: #ff1744;
 }

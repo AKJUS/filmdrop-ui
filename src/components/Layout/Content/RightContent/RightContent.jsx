@@ -27,6 +27,7 @@ import {
 } from '../../../../utils/mapHelper'
 import LayerLegend from '../../../Legend/LayerLegend/LayerLegend'
 import { fetchAllFeatures } from '../../../../services/get-all-scenes-service'
+import { getBasemapConfig } from '../../../../utils/themeHelper'
 import { CircularProgress } from '@mui/material'
 import DOMPurify from 'dompurify'
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
@@ -65,6 +66,7 @@ const RightContent = () => {
   )
   const _appName = useSelector((state) => state.mainSlice.appName)
   const _showLayerList = useSelector((state) => state.mainSlice.showLayerList)
+  const _currentTheme = useSelector((state) => state.mainSlice.currentTheme)
 
   const dispatch = useDispatch()
 
@@ -142,13 +144,14 @@ const RightContent = () => {
   }
 
   useEffect(() => {
-    if (_appConfig.BASEMAP_HTML_ATTRIBUTION) {
-      const output = sanitizeAttribution(
-        String(_appConfig.BASEMAP_HTML_ATTRIBUTION)
-      )
+    const basemapConfig = getBasemapConfig(_appConfig, _currentTheme)
+    if (basemapConfig?.attribution) {
+      const output = sanitizeAttribution(String(basemapConfig.attribution))
       setmapAttribution(output)
+    } else {
+      setmapAttribution(null)
     }
-  }, [])
+  }, [_appConfig, _currentTheme])
 
   function sanitizeAttribution(dirty) {
     const clean = {
@@ -415,15 +418,8 @@ const RightContent = () => {
               Leaflet
             </a>{' '}
             <span aria-hidden="true">|</span>{' '}
-            {_appConfig.BASEMAP_URL && mapAttribution ? (
+            {mapAttribution && (
               <span dangerouslySetInnerHTML={mapAttribution}></span>
-            ) : (
-              <span>
-                &copy;{' '}
-                <a href="https://www.openstreetmap.org/copyright">
-                  OpenStreetMap
-                </a>
-              </span>
             )}
           </div>
         </Tooltip>

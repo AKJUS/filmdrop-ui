@@ -14,6 +14,7 @@ import * as CollectionsService from './services/get-collections-service'
 import * as LoadConfigService from './services/get-config-service'
 import { mockAppConfig } from './testing/shared-mocks'
 import * as ConfigHelper from './utils/configHelper'
+import * as ThemeHelper from './utils/themeHelper'
 
 describe('App', () => {
   const setup = () =>
@@ -26,6 +27,11 @@ describe('App', () => {
   describe('on app render with config', () => {
     beforeEach(() => {
       store.dispatch(setappConfig(mockAppConfig))
+      // Mock theme initialization to avoid CSS validation errors in tests
+      vi.spyOn(ThemeHelper, 'initializeTheme').mockReturnValue({
+        currentTheme: null,
+        switchingEnabled: false
+      })
     })
     afterEach(() => {
       vi.restoreAllMocks()

@@ -143,12 +143,21 @@
       "high": 7
     }
   },
-  "BASEMAP_URL": "https://tile-provider.example.com/{z}/{x}/{y}.png",
-  "BASEMAP_DARK_THEME": true,
-  "BASEMAP_HTML_ATTRIBUTION": "&copy; <a href=\"https://www.tile-provider.example.com/copyright\">TileProvider</a>",
+  "BASEMAP": {
+    "url": "https://tile-provider.example.com/{z}/{x}/{y}.png",
+    "attribution": "&copy; <a href=\"https://www.tile-provider.example.com/copyright\">TileProvider</a>"
+  },
+  "THEME_SWITCHING_ENABLED": true,
   "SEARCH_BY_GEOM_ENABLED": false,
   "CART_ENABLED": false,
-  "SHOW_BRAND_LOGO": true,
+  "BRAND_LOGO": {
+    "url": "https://your-company.com",
+    "title": "Visit Your Company",
+    "alt": "Your Company Logo",
+    "image": "./your-brand-logo.png",
+    "image_light": "./your-brand-logo-light-mode.png",
+    "image_dark": "./your-brand-logo-dark-mode.png"
+  },
   "POPUP_DISPLAY_FIELDS": {
     "sentinel-2-l2a": ["datetime", "platform", "eo:cloud_cover"],
     "sentinel-2-l1c": ["datetime", "platform", "eo:cloud_cover"],
